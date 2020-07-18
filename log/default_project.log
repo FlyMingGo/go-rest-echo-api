@@ -1,0 +1,24 @@
+[2020/07/17 15:05:59 PDT] [default] [DEBG] (testproject/handler.ApiLogin:48) SqlQuery:SELECT id FROM user_login WHERE username = 'admin' AND password = 'admin'
+
+[2020/07/17 15:05:59 PDT] [default] [INFO] (testproject/handler.ApiLogin:68) JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTUwMjcxNTksInVpZCI6MX0.TkXbxzQfKyegT-6wgZvsNUfNhYHoIEApvqn3U4Ex_L8 user=admin
+
+[2020/07/17 15:09:38 PDT] [default] [DEBG] (testproject/handler.ApiCreatUser:130) SqlQuery:INSERT INTO user_info (name, age, city) VALUES ('Jack', '15', 'Chengdu')
+
+[2020/07/17 15:11:35 PDT] [default] [DEBG] (testproject/handler.ApiCreatUser:130) SqlQuery:INSERT INTO user_info (name, age, city) VALUES ('Jackson', '18', 'London')
+
+[2020/07/17 15:11:35 PDT] [default] [INFO] (testproject/handler.ApiCreatUser:136) GreatUserInfo:
+%!(EXTRA *handler.Req=&{Jackson 18 London})
+[2020/07/17 19:50:02 PDT] [default] [DEBG] (testproject/handler.ApiLogin:48) SqlQuery:SELECT id FROM user_login WHERE username = 'admin' AND password = 'admin'
+
+[2020/07/17 19:50:02 PDT] [default] [INFO] (testproject/handler.ApiLogin:68) JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTUwNDQyMDIsInVpZCI6MX0.vTCnBXt38m7MxZvnBXM_bouO33KrpV9AnKzMfwz7frk user=admin
+
+[2020/07/17 19:50:12 PDT] [default] [DEBG] (testproject/handler.ApiUpdateUser:172) SqlQuery:UPDATE user_info SET name = 'Ian', age = '18', city = 'Victoria' where id = 7
+
+[2020/07/17 19:50:12 PDT] [default] [INFO] (testproject/handler.ApiUpdateUser:178) GreatUserInfo:
+%!(EXTRA *handler.Req=&{7 Ian 18 Victoria})
+[2020/07/17 20:00:16 PDT] [default] [DEBG] (testproject/handler.ApiDeleteUserInfo:201) SqlQuery:SELECT id,name,age,city FROM user_info WHERE id = 7
+
+[2020/07/17 20:00:16 PDT] [default] [DEBG] (testproject/handler.ApiDeleteUserInfo:217) SqlQuery:DELETE FROM user_info WHERE id = 7
+
+[2020/07/17 20:00:16 PDT] [default] [INFO] (testproject/handler.ApiDeleteUserInfo:234) GreatUserInfo:
+%!(EXTRA model.UserInfo={7 Ian 18 Victoria})
